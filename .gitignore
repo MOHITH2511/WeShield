@@ -7,9 +7,22 @@ pnpm-lock.yaml
 package-lock.json
 
 # Python
+# Node
+node_modules/
+**/node_modules/
+
+# pnpm / npm locks
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Python
 venv/
 backend/venv/
 frontend/venv/
+ENV/
+env/
+.venv/
 *.pyc
 __pycache__/
 
@@ -24,10 +37,20 @@ sos_snaps/
 uploads/
 *.log
 
+# Uploaded media / runtime captures (keep these out of git)
+backend/uploads/
+frontend/uploads/
+
 # Models and large binaries
 *.pth
 *.pt
 models/
+weights/
+*.onnx
+*.ckpt
+*.h5
+*.pb
+*.tflite
 
 # Next.js build output
 frontend/.next/
@@ -53,3 +76,34 @@ out/
 
 # OS
 .DS_Store
+Thumbs.db
+
+# Large binary files and compiled libraries
+*.dll
+*.so
+*.dylib
+*.lib
+*.a
+*.exe
+*.bin
+
+# Archives and packages
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Cache, test and tooling
+.pytest_cache/
+.mypy_cache/
+.cache/
+pip-wheel-metadata/
+__pypackages__/
+
+# Local npm/pnpm/yarn lock files (ignore if you prefer to commit them)
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Git LFS recommended for very large files (models, datasets)
+# If you want to store models or large binaries, consider using Git LFS instead of committing them.
