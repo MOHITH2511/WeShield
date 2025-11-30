@@ -1,0 +1,8 @@
+SOS DETECTED
+Time: 20251129_144727
+Track ID: 1
+Reason: hand
+Hand Sign: waving
+Face BBox: (299, 12, 348, 73)
+Hand Count: 17
+Recoil Count: 0

@@ -1,0 +1,8 @@
+SOS DETECTED
+Time: 20251129_144719
+Track ID: 1
+Reason: hand
+Hand Sign: left_up
+Face BBox: (292, 27, 339, 88)
+Hand Count: 8
+Recoil Count: 0

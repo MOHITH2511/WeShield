@@ -1,0 +1,55 @@
+# Node
+node_modules/
+**/node_modules/
+
+# pnpm / npm locks
+pnpm-lock.yaml
+package-lock.json
+
+# Python
+venv/
+backend/venv/
+frontend/venv/
+*.pyc
+__pycache__/
+
+# Environment
+.env
+.env.*
+
+# Logs and runtime
+stream_logs/
+sos_logs/
+sos_snaps/
+uploads/
+*.log
+
+# Models and large binaries
+*.pth
+*.pt
+models/
+
+# Next.js build output
+frontend/.next/
+.next/
+
+# node_modules (explicitly ignore frontend and backend)
+/frontend/node_modules/
+/backend/node_modules/
+
+# Python caches
+**/__pycache__/
+*.py[cod]
+
+
+# Build artifacts
+dist/
+build/
+out/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
