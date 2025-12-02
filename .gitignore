@@ -1,3 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+.venv/
+
+# Logs and runtime
+*.log
+sos_logs/
+stream_logs/
+uploads/
+
+# Models and weights (ignore by default; track with LFS if needed)
+*.pth
+*.pt
+backend/models/
+backend/*.pth
+backend/*.pt
+
+# Node
+node_modules/
+dist/
+
+# Lockfiles (keep pnpm-lock for reproducibility; remove this line if you want to ignore it)
+# pnpm-lock.yaml
+
+# IDEs
+.vscode/
+*.swp
+
+# Secrets
+.env
 # Node
 node_modules/
 **/node_modules/
