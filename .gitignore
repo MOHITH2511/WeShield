@@ -1,119 +1,80 @@
+# --------------------
+# WeShield .gitignore
+# Keep this file minimal and specific: don't duplicate entries.
+# --------------------
+
 # Python
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-env/
-venv/
-.venv/
-
-# Logs and runtime
-*.log
-sos_logs/
-stream_logs/
-uploads/
-
-# Models and weights (ignore by default; track with LFS if needed)
-*.pth
-*.pt
-backend/models/
-backend/*.pth
-backend/*.pt
-
-# Node
-node_modules/
-dist/
-
-# Lockfiles (keep pnpm-lock for reproducibility; remove this line if you want to ignore it)
-# pnpm-lock.yaml
-
-# IDEs
-.vscode/
-*.swp
-
-# Secrets
-.env
-# Node
-node_modules/
-**/node_modules/
-
-# pnpm / npm locks
-pnpm-lock.yaml
-package-lock.json
-
-# Python
-# Node
-node_modules/
-**/node_modules/
-
-# pnpm / npm locks
-pnpm-lock.yaml
-package-lock.json
-yarn.lock
-
-# Python
+*.pyc
 venv/
 backend/venv/
 frontend/venv/
-ENV/
-env/
 .venv/
-*.pyc
-__pycache__/
+env/
+ENV/
 
-# Environment
+# Environment & secrets
 .env
 .env.*
 
 # Logs and runtime
+*.log
 stream_logs/
 sos_logs/
 sos_snaps/
 uploads/
-*.log
-
-# Uploaded media / runtime captures (keep these out of git)
 backend/uploads/
 frontend/uploads/
 
-# Models and large binaries
+# Models and large binaries (ignored by default; use Git LFS if you want to track them)
 *.pth
 *.pt
-models/
-weights/
 *.onnx
 *.ckpt
 *.h5
 *.pb
 *.tflite
+models/
+weights/
+backend/models/
 
-# Next.js build output
-frontend/.next/
-.next/
-
-# node_modules (explicitly ignore frontend and backend)
+# Node / JS
+node_modules/
 /frontend/node_modules/
 /backend/node_modules/
+pnpm-debug.log*
 
-# Python caches
-**/__pycache__/
-*.py[cod]
+# Lockfiles
+# Keep lockfiles for reproducible installs. Remove the lines below if you prefer to ignore them.
+# pnpm-lock.yaml
+# package-lock.json
+# yarn.lock
 
-
-# Build artifacts
+# Frontend build artifacts
+frontend/.next/
+.next/
 dist/
 build/
 out/
 
-# IDEs
+# Caches, test artifacts
+.pytest_cache/
+.mypy_cache/
+.cache/
+pip-wheel-metadata/
+__pypackages__/
+
+# IDEs and OS files
 .vscode/
 .idea/
-
-# OS
+*.swp
 .DS_Store
 Thumbs.db
 
-# Large binary files and compiled libraries
+# Binaries and archives
 *.dll
 *.so
 *.dylib
@@ -121,24 +82,13 @@ Thumbs.db
 *.a
 *.exe
 *.bin
-
-# Archives and packages
 *.zip
 *.tar
 *.tar.gz
 *.tgz
 
-# Cache, test and tooling
-.pytest_cache/
-.mypy_cache/
-.cache/
-pip-wheel-metadata/
-__pypackages__/
-
-# Local npm/pnpm/yarn lock files (ignore if you prefer to commit them)
-pnpm-lock.yaml
-package-lock.json
-yarn.lock
-
-# Git LFS recommended for very large files (models, datasets)
-# If you want to store models or large binaries, consider using Git LFS instead of committing them.
+# Notes
+# Use Git LFS for very large files (models, datasets). To enable LFS, run:
+#   git lfs install
+#   git lfs track "*.pth" "*.pt"
+# and commit the generated .gitattributes file.
